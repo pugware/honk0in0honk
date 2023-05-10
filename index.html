@@ -1,0 +1,91 @@
+<html>
+<head>
+  <title>Desktop Goose Honk Edition</title>
+  <style>
+ /* Add your CSS styles here */
+body {
+  background-color: lightblue; /* Change the background color of the web page */
+  font-family: Arial, sans-serif; /* Change the font of the text */
+}
+
+h1 {
+  color: white; /* Change the color of the heading */
+  text-align: center; /* Align the heading to the center */
+}
+
+p {
+  color: black; /* Change the color of the paragraph */
+  text-align: justify; /* Align the paragraph to both sides */
+}
+
+img {
+  width: 200px; /* Change the width of the image */
+  height: auto; /* Adjust the height of the image according to its aspect ratio */
+  position: absolute; /* Position the image relative to its parent element */
+  left: 50%; /* Move the image to the center horizontally */
+  top: 50%; /* Move the image to the center vertically */
+  transform: translate(-50%, -50%); /* Offset the image by half of its width and height */
+}
+    
+  </style>
+</head>
+<body>
+  <h1>Welcome to Desktop Goose!</h1>
+  <p>This is a website where you can have a goose on your screen that can honk, drag, and drop on your web page.</p>
+  <img id="goose" src="goose.png" alt="Goose"> <!-- Add your goose image here -->
+  <script>
+    /* Add your JavaScript code here */
+// Get the body element by its tag name
+var body = document.getElementsByTagName("body")[0];
+
+// Define a function to change the background color of the web page randomly
+function changeColor() {
+  // Define an array of colors
+  var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+  // Generate a random index from 0 to 6
+  var index = Math.floor(Math.random() * 7);
+
+  // Get the color at the random index
+  var color = colors[index];
+
+  // Set the background color of the body element to the random color
+  body.style.backgroundColor = color;
+}
+
+// Define a function to add a heading with a random message to the web page
+function addMessage() {
+  // Define an array of messages
+  var messages = ["HONK!", "I'm a goose.", "This is my website.", "You can't stop me.", "I like memes."];
+
+  // Generate a random index from 0 to 4
+  var index = Math.floor(Math.random() * 5);
+
+  // Get the message at the random index
+  var message = messages[index];
+
+  // Create a new h2 element
+  var h2 = document.createElement("h2");
+
+  // Set the text content of the h2 element to the random message
+  h2.textContent = message;
+
+  // Set the color of the h2 element to white
+  h2.style.color = "white";
+
+  // Set the text alignment of the h2 element to center
+  h2.style.textAlign = "center";
+
+  // Append the h2 element to the body element
+  body.appendChild(h2);
+}
+
+// Add an event listener to call the changeColor function every second
+window.setInterval(changeColor, 1000);
+
+// Add an event listener to call the addMessage function every five seconds
+window.setInterval(addMessage, 5000);
+    
+  </script>
+</body>
+</html>
