@@ -51,7 +51,7 @@ javascript:(function(){
     }, 1000);
 
     // Added code to make the goose honk randomly
-    var honkSound = new Audio('https://pugware.github.io/honk0in0honk/HONKsounds/honk.mp3');
+    var honkSound = new Audio('https://pugware.github.io/honk0in0honk/HONKsounds/honk-sound.mp3');
     setInterval(function() {
         if (Math.random() < 0.05) {
             honkSound.play();
